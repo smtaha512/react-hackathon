@@ -11,7 +11,7 @@ const AuthForm: React.SFC<AuthFormProps> = (props: AuthFormProps) =>
   el(
     'form',
     { className: 'w-100' },
-    props.labelGroupsProps.map(labelGroupProps => el(FormLabelGroup, labelGroupProps)),
+    props.labelGroupsProps.map((labelGroupProps, idx) => el(FormLabelGroup, { ...labelGroupProps, key: idx })),
     el(AuthButton, { text: props.buttonText })
   );
 
