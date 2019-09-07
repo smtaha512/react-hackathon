@@ -1,17 +1,34 @@
 import React from 'react';
+
 import Header from '../components/header/header';
+import Card from '../components/card/card';
 
 const el = React.createElement;
 
-const LandingPage: React.FC = () => el('div', null, el(Header), el('div', { className: 'container' }));
-export default LandingPage;
+const DUMMY_IMAGE_URL = 'http://lorempixel.com/200/100';
+const CARDS = [1, 2, 3, 4, 5, 6].map(_ => ({
+  title: `Dummy title ${_}`,
+  text: `dummy text ${_}`,
+  image: { src: DUMMY_IMAGE_URL },
+  goTo: 'google.com'
+}));
+const CARDS_WITH_COLS = CARDS.map(card => el('div', { className: 'col-4 my-5' }, el(Card, card)));
+const LandingPage: React.FC = () =>
+  el(
+    'div',
+    null,
+    el(Header),
+    el(
+      'div',
+      { className: 'container' },
+      el(
+        'div',
+        {
+          className: 'row'
+        },
+        ...CARDS_WITH_COLS
+      )
+    )
+  );
 
-{
-  /* <div class="card text-left">
-  <img class="card-img-top" src="holder.js/100px180/" alt="">
-  <div class="card-body">
-    <h4 class="card-title">Title</h4>
-    <p class="card-text">Body</p>
-  </div>
-</div> */
-}
+export default LandingPage;
