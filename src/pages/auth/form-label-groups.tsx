@@ -24,14 +24,14 @@ const FormLabelGroup: React.SFC<FormLabelGroupProps> = (props: FormLabelGroupPro
   return el(
     'div',
     { className: 'form-label-group' },
-    el('label', { for: id }, text),
+    el('label', { htmlFor: id }, text),
     el('input', {
       type,
       id,
       className: `px-3 py-2 mb-3 ${className}`,
       placeholder,
       required,
-      autofocus
+      autoFocus: autofocus
     })
   );
 };
