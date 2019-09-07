@@ -34,7 +34,7 @@ const Header: React.FC = () =>
         el(
           'li',
           { className: 'nav-item' },
-          el(NavLink, { activeClassName: 'active', className: 'nav-link', to: '/' }, 'Link')
+          el(NavLink, { activeClassName: 'active', className: 'nav-link', to: '/signup' }, 'Signup')
         )
       )
     )

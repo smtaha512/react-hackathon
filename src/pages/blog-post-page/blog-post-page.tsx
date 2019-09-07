@@ -1,6 +1,6 @@
 import * as React from 'react';
+
 import Header from '../../components/header/header';
-import BlogPostTitle from './blog-post-title';
 import BlogPostMetadata from './blog-post-meta-data';
 import BlogPostBody from './blog-post-body';
 
