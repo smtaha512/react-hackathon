@@ -39,8 +39,7 @@ class SignupPage extends React.Component<SignupPageProps, SignupPageState> {
               id: 'password',
               className: 'form-control',
               placeholder: 'Password',
-              required: true,
-              autofocus: true
+              required: true
             },
             label: { text: 'Password' }
           }

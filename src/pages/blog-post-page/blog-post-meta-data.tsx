@@ -18,10 +18,12 @@ const BlogPostMetadata: React.SFC<BlogPostMetadataProps> = (props: BlogPostMetad
   el(
     'div',
     null,
-    el(BlogPostTitle, props.title),
-    el(BlogPostAuthorName, props.author),
-    el(BlogPostPublishDate, props.date),
-    el(FluidRoundedImage, props.image)
+    BlogPostTitle(props.title),
+    BlogPostAuthorName(props.author),
+    el('hr'),
+    BlogPostPublishDate(props.date),
+    el('hr'),
+    FluidRoundedImage(props.image)
   );
 
 export default BlogPostMetadata;

@@ -16,7 +16,7 @@ class BlogPostPage extends React.Component<BlogPostPageProps, BlogPostPageState>
     return el(
       'div',
       null,
-      el(Header),
+      Header({}),
       el(
         'div',
         { className: 'container' },
@@ -26,14 +26,14 @@ class BlogPostPage extends React.Component<BlogPostPageProps, BlogPostPageState>
           el(
             'div',
             { className: 'col-lg-8' },
-            el(BlogPostMetadata, {
+            BlogPostMetadata({
               date: { date: new Date(), className: '' },
-              image: { src: 'http://lorempixel.com/600/200' },
+              image: { src: 'http://lorempixel.com/900/300' },
               author: { name: 'Taha', className: 'lead' },
               title: { title: '' }
             }),
             el('hr'),
-            el(BlogPostBody, {
+            BlogPostBody({
               body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, praesentium optio tempora consequatur pariatur ipsa adipisci provident aspernatur earum eum quaerat quia inventore saepe at fuga, odit aperiam sed? Quae?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, praesentium optio tempora consequatur pariatur ipsa adipisci provident aspernatur earum eum quaerat quia inventore saepe at fuga, odit aperiam sed? Quae?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, praesentium optio tempora consequatur pariatur ipsa adipisci provident aspernatur earum eum quaerat quia inventore saepe at fuga, odit aperiam sed? Quae?

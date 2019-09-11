@@ -32,8 +32,7 @@ const SigninPage: React.SFC<SigninPageProps> = () => {
             id: 'password',
             className: 'form-control',
             placeholder: 'Password',
-            required: true,
-            autofocus: true
+            required: true
           },
           label: { text: 'Password' }
         }
